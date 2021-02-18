@@ -1,0 +1,35 @@
+#main-page {
+  width: 70%;
+  height: 100%;
+  display: grid;
+  margin-bottom: 5rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "header header header"
+    "events events events"
+    "footer footer footer";
+  .title {
+    grid-area: header;
+    padding: 4rem;
+    color: #af42b9;
+  }
+  .events-section {
+    display: flex;
+    flex-direction: column;
+    background-color: #9fb4ca;
+    border: #af42b9 1px solid;
+    margin: 0.3rem;
+    width: 300px;
+    #card-event {
+      display: flex;
+    }
+  }
+}
+#foot {
+  height: 200px;
+  width: 100%;
+  background-color: #4e5d6d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

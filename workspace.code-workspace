@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../vue/vue-ticket-shop"
+		},
+		{
+			"path": "../../summer/portfolio_published"
+		}
+	],
+	"settings": {}
+}

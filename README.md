@@ -1,4 +1,4 @@
-# meetup3
+# meetup2
 
 ## Project setup
 ```
