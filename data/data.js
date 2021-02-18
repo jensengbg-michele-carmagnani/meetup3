@@ -1,4 +1,4 @@
-const event = [
+const events = [
     {
       
       "name": "Vasco Rossi",
@@ -97,6 +97,6 @@ const event = [
     }
 ]
 
-function event() {
-  return event 
+function events() {
+return events
 }
