@@ -96,7 +96,3 @@ const events = [
       "id": 1
     }
 ]
-
-function events() {
-return events
-}

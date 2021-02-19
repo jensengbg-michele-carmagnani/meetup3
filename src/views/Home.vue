@@ -29,8 +29,5 @@ export default {
     MainPage,
     Foot,
   },
-  props: {
-    events: Array,
-  },
 };
 </script>

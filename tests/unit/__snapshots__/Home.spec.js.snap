@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainPage.vue should render Foot coponent 1`] = `
+<div id="home">
+  <header class="header">
+    <h1>Meetup page</h1>
+    <nav>
+      <section class="search-section"><input type="text" class="css-input"> <button class="btn-search">search</button></section>
+      <section class="choises"><button class="btn-choises">Happening today</button> <button class="btn-choises">OnLine</button> <button class="btn-choises">Meditation</button></section>
+    </nav>
+  </header>
+  <section id="main-page">
+    <h2 class="title">Eventpage</h2>
+  </section>
+  <section id="foot">
+    <h1>footer</h1>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </section>
+</div>
+`;

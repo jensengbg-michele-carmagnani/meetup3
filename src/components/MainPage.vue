@@ -3,7 +3,7 @@
     <h2 class="title">Eventpage</h2>
     <Event
       class="events-section"
-      v-for="(event, index) in getEvents.data.events"
+      v-for="(event, index) in getEvents"
       :key="index"
       :event="event"
     />
@@ -14,15 +14,20 @@
 import Event from "@/components/Event.vue";
 export default {
   name: "MainPage",
+  data() {
+    return {
+      events: this.$store.state.events,
+    };
+  },
   components: {
     Event,
   },
- 
-  computed:{
-    getEvents(){
-       return this.$store.getters.events 
-    }
-  }
+
+  computed: {
+    getEvents() {
+      return this.$store.getters.events;
+    },
+  },
 };
 </script>
 

@@ -8,6 +8,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    showLogin:false,
     url: "https://api.jsonbin.io/b/602e35b84177c81b39c7d9d4",
     events: Array,
   },
@@ -21,7 +22,7 @@ export default new Vuex.Store({
       try {
         let events = await ax.get(`${ctx.state.url}`);
         console.log("data", events.data.events);
-        ctx.commit("storeEvents", events);
+        ctx.commit("storeEvents", events.data.events);
       } catch (error) {
         console.log("error in fetch event 2", error);
       }
