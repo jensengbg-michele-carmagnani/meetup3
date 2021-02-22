@@ -5,13 +5,12 @@
       <nav>
         <section class="search-section">
           <input type="text" class="css-input" />
-          <button class="btn-search">search</button>
         </section>
-        <section class="choises">
+        <!-- <section class="choises">
           <button class="btn-choises">Happening today</button>
           <button class="btn-choises">OnLine</button>
           <button class="btn-choises">Meditation</button>
-        </section>
+        </section> -->
       </nav>
     </header>
     <MainPage />

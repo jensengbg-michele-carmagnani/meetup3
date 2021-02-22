@@ -1,5 +1,5 @@
 <template>
-  <section id="card">
+  <section id="card" @click="goToDetails(event.name)">
     <img class="event-img" :src="event.image" alt="" />
     <h3 class="location">{{ event.location }}</h3>
     <h3 class="data">{{ event.date }}</h3>
@@ -13,6 +13,11 @@ export default {
   name: "Event",
   props: {
     event: Object,
+  },
+  methods: {
+    goToDetails(name) {
+      this.$router.push(`/eventInfo/${name}`);
+    },
   },
 };
 </script>

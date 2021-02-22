@@ -47,53 +47,58 @@ body {
         flex-direction: column;
         justify-content: space-around;
         width: 100%;
-        height: 400px;
+        height: 70%;
         background-image: url("../src/assets/kaizen-nguy-n-jcLcWL8D7AQ-unsplash.jpg");
         background-position: center  ;
         background-repeat: no-repeat;
         background-size: cover;
-        // background-color: rgb(67, 67, 98);
+         //background-color: rgb(67, 67, 98);
+         h1{
+           color:rgb(183, 55, 187);
+           
+         }
 
         .search-section {
           display: flex;
           justify-content: center;
           align-items: center;
 
-          .btn-search {
-            background-color: transparent;
-            -webkit-border-radius: 20px;
-            -moz-border-radius: 20px;
-            border-radius: 20px;
-            color: #fdfdfd;
-            font-family: Tahoma;
-            font-size: 30px;
-            font-weight: 100;
-            padding: 10px;
-            -webkit-box-shadow: 1px 1px 20px 0 #000000;
-            -moz-box-shadow: 1px 1px 20px 0 #000000;
-            box-shadow: 1px 1px 20px 0 #000000;
-            text-shadow: 1px 1px 20px #000000;
-            border: solid #337fed 1px;
-            text-decoration: none;
-            display: inline-block;
-            cursor: pointer;
-            text-align: center;
-            margin-left: 3rem;
-          }
+          // .btn-search {
+          //   background-color: transparent;
+          //   -webkit-border-radius: 20px;
+          //   -moz-border-radius: 20px;
+          //   border-radius: 20px;
+          //   color: #b330db;
+           
+          //   font-family: Tahoma;
+          //   font-size: 30px;
+          //   font-weight: 100;
+          //   padding: 10px;
+          //   -webkit-box-shadow: 1px 1px 20px 0 #000000;
+          //   -moz-box-shadow: 1px 1px 20px 0 #000000;
+          //   box-shadow: 1px 1px 20px 0 #000000;
+          //   text-shadow: 1px 1px 20px #000000;
+          //   border: solid #337fed 1px;
+          //   text-decoration: none;
+          //   display: inline-block;
+          //   cursor: pointer;
+          //   text-align: center;
+          //   margin-left: 3rem;
+          // }
 
-          .btn-search:hover {
-            border: solid #337fed 1px;
-            background: #1e62d0;
-            background-image: -webkit-linear-gradient(top, #1e62d0, #3d94f6);
-            background-image: -moz-linear-gradient(top, #1e62d0, #3d94f6);
-            background-image: -ms-linear-gradient(top, #1e62d0, #3d94f6);
-            background-image: -o-linear-gradient(top, #1e62d0, #3d94f6);
-            background-image: -webkit-gradient(to bottom, #1e62d0, #3d94f6);
-            -webkit-border-radius: 20px;
-            -moz-border-radius: 20px;
-            border-radius: 20px;
-            text-decoration: none;
-          }
+          // .btn-search:hover {
+          //   border: solid #337fed 1px;
+          //   background: #1e62d0;
+          //   background-image: -webkit-linear-gradient(top, #1e62d0, #3d94f6);
+          //   background-image: -moz-linear-gradient(top, #1e62d0, #3d94f6);
+          //   background-image: -ms-linear-gradient(top, #1e62d0, #3d94f6);
+          //   background-image: -o-linear-gradient(top, #1e62d0, #3d94f6);
+          //   background-image: -webkit-gradient(to bottom, #1e62d0, #3d94f6);
+          //   -webkit-border-radius: 20px;
+          //   -moz-border-radius: 20px;
+          //   border-radius: 20px;
+          //   text-decoration: none;
+          // }
 
           .css-input {
             padding: 5px;

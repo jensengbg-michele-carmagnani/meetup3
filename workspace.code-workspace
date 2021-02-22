@@ -4,10 +4,7 @@
 			"path": "."
 		},
 		{
-			"path": "../vue/vue-ticket-shop"
-		},
-		{
-			"path": "../../summer/portfolio_published"
+			"path": "../vue/vue-airBean-project"
 		}
 	],
 	"settings": {}
