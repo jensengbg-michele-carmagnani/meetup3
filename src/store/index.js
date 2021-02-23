@@ -8,9 +8,9 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    showLogin: true,
-    url: "https://api.jsonbin.io/b/602e35b84177c81b39c7d9d4/3",
-    urlLogin: "https://api.jsonbin.io/b/602fc941a3e9f25d023c32e4",
+    showLogin: false,
+    url: "https://api.jsonbin.io/b/602e35b84177c81b39c7d9d4",
+    urlLogin: "https://api.jsonbin.io/b/6034da77f1be644b0a6397f7",
     apiKey: "$2b$10$g5gmSB.VY51NvZigu8XLieJCl3jy/IV218XvHaLZ0yWcOYyRYHA9G",
     events: Array,
     user: Object,
@@ -33,7 +33,7 @@ export default new Vuex.Store({
   actions: {
     async fetchEvents(ctx) {
       try {
-        let events = await ax.get(`${ctx.state.url}`);
+        let events = await ax.get(`${ctx.state.url}/latest`);
         console.log("data", events.data.events);
         ctx.commit("storeEvents", events.data.events);
       } catch (error) {
@@ -41,51 +41,54 @@ export default new Vuex.Store({
       }
     },
     async login(ctx, user) {
+      let loginUser = user;
       try {
-        let loginUser = user;
-        // fetch the api Jsonbin with the all the users
-        let login = await ax.get(`${ctx.state.urlLogin}`);
-        console.log("login from jsonBin", login.data.users);
-
-        //find the user form the api data if exist
-        let success = login.data.users.find(
+        let loginMebers = await ax.get(`${ctx.state.urlLogin}`);
+        // find the user form the api data if exist
+        let isMatch = loginMebers.data.users.find(
           (user) => (user.username = loginUser.username)
         );
+
+        // // let isMetch = loginMebersArray.includes("michele");
+        console.log("is metch", isMatch);
+
         // setItem in local storage and commit the user + toggle showlogin
-        if (success) {
-          console.log("success", success);
+        if (isMatch !== undefined) {
+          console.log("isMetch inside");
           sessionStorage.setItem("meetup", JSON.stringify(loginUser));
-          ctx.commit("setUser", success);
+          ctx.commit("setUser", user);
           ctx.commit("toggleLoggedIn");
         } else {
           alert("password or username wrongs");
         }
       } catch (error) {
-        console.error("something went wrong");
+        console.log(error);
       }
+      // fetch the api JSONbin with the  users
     },
     async setReview(ctx, data) {
-      let findObj = this.state.events.find((event) => event.name == data.name);
-      console.log("find obj", findObj);
+      let findObj = this.state.events.find(
+        (event) => event.name == data.eventName
+      );
+      findObj.review.push(data.reviewText);
+      console.log("setreview events", findObj);
 
       let options = {
         headers: {
           "Content-Type": "application/json",
-          "X-Master-Key": ctx.state.apiKey,
         },
       };
       try {
-        let review = await ax.post(
+        let review = await ax.put(
           `${ctx.state.url}`,
           {
             events: ctx.state.events,
-            review: data,
           },
           options
         );
         console.log("review", review);
       } catch (error) {
-        console.log("error for comment put", error);
+        console.log("ERROR IN SETREVIEW", error);
       }
     },
   },

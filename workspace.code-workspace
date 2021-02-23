@@ -1,11 +1,20 @@
 {
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "../vue/vue-airBean-project"
-		}
-	],
-	"settings": {}
+  "folders": [
+	{
+		"path": "."
+	},
+	{
+		"path": "../vue/vue-airBean-project"
+	},
+	{
+		"path": "../../summer/validator"
+	},
+	{
+		"path": "../vue/doggy-daycare"
+	},
+	{
+		"path": "../../code-mosh/javascript/script"
+	}
+],
+  "settings": {}
 }

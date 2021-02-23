@@ -16,7 +16,7 @@ export default {
   },
   methods: {
     goToDetails(name) {
-      this.$router.push(`/eventInfo/${name}`);
+      this.$router.push(`/infoPage/${name}`);
     },
   },
 };

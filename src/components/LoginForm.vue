@@ -1,6 +1,6 @@
 <template>
   <section id="login-form">
-    <section v-if="!loggedIn" class="login">
+    <section v-if="!isLoggedIn" class="login">
       <div class="main">
         <p class="sign" align="center">Sign in</p>
         <form class="form1">
@@ -10,6 +10,7 @@
             type="text"
             align="center"
             placeholder="Username"
+            :class="{ 'fail-username': this.isFailed }"
           />
           <input
             v-model="login.pass"
@@ -17,6 +18,7 @@
             type="password"
             align="center"
             placeholder="Password"
+            :class="{ 'fail-password': this.isFailed }"
           />
 
           <button @click="getLogin" class="submit">Sign in</button>
@@ -32,27 +34,40 @@
 
 <script>
 export default {
-  name: "Login",
+  name: "LoginForm",
   data() {
     return {
       login: {
         username: "",
         pass: "",
       },
-      loggedIn: false,
+      
+      isFailed: false,
     };
   },
   methods: {
     async getLogin() {
-      await this.$store.dispatch("login", this.login);
-      this.loggedIn = this.$store.state.showLogin;
-      this.login.username = "";
-      this.login.pass = "";
-      this.$router.push("/");
+      let userLogin = { username: this.login.username, pass: this.login.pass };
+
+      await this.$store.dispatch("login", userLogin);
+      if (this.isLoggedIn) {
+        this.login.username = "";
+        this.login.pass = "";
+        this.$router.push("/");
+      } else {
+        this.isFailed = !this.isFailed;
+        this.login.username = "";
+        this.login.pass = "";
+      }
     },
     async logout() {
       await this.$store.commit("logoutUser");
       this.loggedIn = false;
+    },
+  },
+  computed: {
+    isLoggedIn() {
+      return this.$store.state.showLogin;
     },
   },
 };

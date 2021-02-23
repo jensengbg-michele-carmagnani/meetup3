@@ -1,7 +1,7 @@
 <template>
   <section id="comments">
-    <h3>Comments</h3>
-    <p class="comment">{{review.davide}}</p>
+  
+    <p class="comment">{{item}}</p>
   </section>
 </template>
 
@@ -9,7 +9,7 @@
 export default {
   name: "Comments",
   props:{
-    review:{}
+    item:{}
   }
 };
 </script>
