@@ -1,10 +1,10 @@
 <template>
-  <section id="card" @click="goToDetails(event.name)">
+  <section id="card" @click="goToDetails(event.idEvent)">
     <img class="event-img" :src="event.image" alt="" />
+    <h3 class="name">{{ event.name }}</h3>
     <h3 class="location">{{ event.location }}</h3>
     <h3 class="data">{{ event.date }}</h3>
-    <h3 class="price">{{ event.price }}</h3>
-    <h3 class="name">{{ event.name }}</h3>
+    <h3 class="price">{{ event.method }}</h3>
   </section>
 </template>
 
@@ -15,8 +15,8 @@ export default {
     event: Object,
   },
   methods: {
-    goToDetails(name) {
-      this.$router.push(`/infoPage/${name}`);
+    goToDetails(id) {
+      this.$router.push(`/infoPage/${id}`);
     },
   },
 };

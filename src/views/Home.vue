@@ -2,16 +2,7 @@
   <div id="home">
     <header class="header">
       <h1>Meetup page</h1>
-      <nav>
-        <section class="search-section">
-          <input type="text" class="css-input" />
-        </section>
-        <!-- <section class="choises">
-          <button class="btn-choises">Happening today</button>
-          <button class="btn-choises">OnLine</button>
-          <button class="btn-choises">Meditation</button>
-        </section> -->
-      </nav>
+      <nav></nav>
     </header>
     <MainPage />
     <Foot/>
@@ -28,5 +19,6 @@ export default {
     MainPage,
     Foot,
   },
+ 
 };
 </script>

@@ -31,7 +31,7 @@ describe("Vuex store  ", () => {
     expect(store.state.events.name).toEqual("Vasco Rossi");
   });
   it('should test getter in store', () => {
-    
+      
   })
   
 });

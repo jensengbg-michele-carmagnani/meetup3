@@ -1,6 +1,5 @@
 import { createLocalVue, mount, shallowMount } from "@vue/test-utils";
 import VueRouter from "vue-router";
-import Event from "@/components/Event.vue";
 import Foot from "@/components/Foot.vue";
 import MainPage from "@/components/MainPage.vue";
 import Home from "@/views/Home.vue";
@@ -8,18 +7,18 @@ import App from "@/App.vue";
 import index from "@/store/index.js";
 import Vuex from "vuex";
 
-const store = new Vuex.Store({ index });
 
+const store = new Vuex.Store({ index });
 describe("MainPage.vue", () => {
   let localVue;
   beforeEach(() => {
     localVue = createLocalVue();
   });
-
+  
   it("should, when the App component is mounted, dispach an action to Vuex", () => {
     localVue.use(VueRouter);
     const router = new VueRouter();
-
+    
     let actions = {
       fetchEvents: jest.fn(),
     };
@@ -31,17 +30,18 @@ describe("MainPage.vue", () => {
     });
     expect(actions.fetchEvents).toHaveBeenCalled();
   });
-
-  // it("should, receive data from fetch and commit it to events array ", () => {
-    
+  // it('should test the mutation ', () => {
+  //   let state = {
+  //      events:Array
+  //   }
   //   let mutations = {
-  //     storeEvents: jest.fn(),
-  //   };
-  //  
-  //   localVue.use(Vuex)
-  //   const store = new Vuex.Store({ mutations });
-  //   expect(mutations.storeEvents).toHaveBeenCalled();
-  // });
+      
+  //   }
+  //   const store = new Vuex.Store({ actions });
+    
+  // })
+
+ 
 
   it("should render Foot coponent", () => {
     const wrapper = mount(Home, {
@@ -69,10 +69,5 @@ describe("MainPage.vue", () => {
     expect(eventComp.exists()).toBe(true);
   });
 
-  it("should display a serch bar in header", () => {
-    const wrapper = shallowMount(Home);
-    const expected = '<input type="text" class="css-input">';
-    const actual = wrapper.find(".css-input").html();
-    expect(actual).toEqual(expected);
-  });
+
 });

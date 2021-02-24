@@ -1,30 +1,57 @@
 #main-page {
-  width: 70%;
-  height: 100%;
+  width: 80%;
+  height: 40%;
   display: grid;
   margin-bottom: 5rem;
   grid-template-columns: repeat(3, 1fr);
+  justify-self: center;
   grid-template-areas:
     "header header header"
+    "search search search"
     "events events events"
     "footer footer footer";
+
   .title {
     grid-area: header;
     padding: 4rem;
     color: #af42b9;
   }
-  .events-section {
+  .search-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: search;
+    padding-bottom: 3rem;
+
+    .css-input {
+      padding: 5px;
+      font-size: 34px;
+      border-width: 1px;
+      border-color: #cccccc;
+      background-color: #ffffff;
+      color: #000000;
+      border-style: solid;
+      border-radius: 7px;
+      box-shadow: 0px 0px 5px rgba(66, 66, 66, 0.75);
+      text-shadow: 0px 0px 5px rgba(66, 66, 66, 0.75);
+    }
+    .css-input:focus {
+      outline: none;
+    }
+  }
+
+  #card {
     display: flex;
     flex-direction: column;
     background-color: #9fb4ca;
     border: #af42b9 1px solid;
     margin: 0.3rem;
-    width: 300px;
-    #card-event {
-      display: flex;
-    }
+    width: 250px;
+    height: 250px;
+    background-image: url('../src/assets/Ethics.webp');
   }
 }
+
 #foot {
   height: 200px;
   width: 100%;
@@ -33,6 +60,7 @@
   justify-content: center;
   align-items: center;
 }
+
 #login-form {
   display: flex;
   justify-content: center;

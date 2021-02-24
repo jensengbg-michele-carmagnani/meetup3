@@ -4,7 +4,7 @@
       <router-link to="/">Casa</router-link> |
       <router-link to="/login">About</router-link>
     </div>
-    <router-view />
+    <router-view  />
   </div>
 </template>
 <script>
@@ -12,6 +12,7 @@ export default {
   beforeMount() {
     this.$store.dispatch("fetchEvents");
   },
+  
 };
 </script>
 

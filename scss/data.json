@@ -1,0 +1,132 @@
+{
+  "events": [
+    {
+      "idEvent": 1,
+      "name": "Let's Talk about ethics",
+      "location": "Göteborg",
+      "date": "Nov 11",
+      "starting-time": "18:30",
+      "method": "onLine",
+      "description": "",
+      "image": "../src/assets/Ethics.webp'",
+      "review": [
+        "hello"
+      ],
+      "enrolled": [
+        "1"
+      ]
+    },
+    {
+      "idEvent": 2,
+      "name": "Introduction to Foucault, Madness and Civilization",
+      "location": "Göteborg",
+      "date": "March 22",
+      "starting-time": "20:30",
+      "method": "onLine",
+      "description": "",
+      "image": "",
+      "review": [
+        "hello"
+      ],
+      "enrolled": [
+        "1"
+      ]
+    },
+    {
+      "idEvent": 3,
+      "name": "Learn how to reach your goals (aka. the science of behavior change)",
+      "location": "Göteborg",
+      "date": "March 2",
+      "starting-time": "10:30",
+      "method": "onLine",
+      "description": "",
+      "image": "",
+      "review": [],
+      "enrolled": [
+       "1"
+      ]
+    },
+    {
+      "idEvent": 4,
+      "name": "Virtual Repair with Fixit Clinic (USA)",
+      "location": "Göteborg",
+      "date": "May 22",
+      "starting-time": "11:30",
+      "method": "onLine",
+      "description": "",
+      "image": "",
+      "review": [],
+      "enrolled": [
+       
+      ]
+    },
+    {
+      "idEvent": 5,
+      "name": "LunchIn Mölndal City Community",
+      "location": "Göteborg",
+      "date": "April 14 ",
+      "starting-time": "11:30",
+      "method": "onLine",
+      "description": "",
+      "image": "",
+      "review": [],
+      "enrolled": [
+        
+      ]
+    },
+    {
+      "idEvent": 6,
+      "name": "Good strategy, bad strategy- Lazy Book Club ",
+      "location": "Göteborg",
+      "date": "March 12",
+      "starting-time": "10:30",
+      "method": "onLine",
+      "description": "",
+      "image": "",
+      "review": [],
+      "enrolled": [
+        "2"
+      ]
+    },
+    {
+      "idEvent": 7,
+      "name": "How to implement a DevOps-friendly API architecture",
+      "location": "Göteborg",
+      "date": "March 352",
+      "starting-time": "20:30",
+      "method": "onLine",
+      "description": "",
+      "image": "",
+      "review": [],
+      "enrolled": []
+    },
+    {
+      "idEvent": 8,
+      "name": "Joy Superheroes Laughter Yoga session",
+      "location": "Göteborg",
+      "date": "March 22",
+      "starting-time": "16:30",
+      "method": "onLine",
+      "description": "",
+      "image": "",
+      "review": [],
+      "enrolled": [
+        "2"
+      ]
+    },
+    {
+      "idEvent": 9,
+      "name": "Online: Finding Purpose - What is that Sunday Evening Feeling? ",
+      "location": "Göteborg",
+      "date": "Apri 22",
+      "starting-time": "19:30",
+      "method": "onLine",
+      "description": "",
+      "image": "",
+      "review": [],
+      "enrolled": [
+        
+      ]
+    }
+  ]
+}
