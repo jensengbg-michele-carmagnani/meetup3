@@ -8,13 +8,13 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    showLogin: false,
-    url: "https://api.jsonbin.io/b/60368717f1be644b0a64627d",
+    url: "https://api.jsonbin.io/b/60379bc20866664b10830aa0",
     urlLogin: "https://api.jsonbin.io/b/6034da77f1be644b0a6397f7",
     apiKey: "$2b$10$g5gmSB.VY51NvZigu8XLieJCl3jy/IV218XvHaLZ0yWcOYyRYHA9G",
     events: Array,
     user: Object,
     correntEvent: String,
+    idEvent: Number,
   },
   mutations: {
     storeEvents(state, data) {
@@ -29,6 +29,9 @@ export default new Vuex.Store({
     logoutUser(state) {
       state.user = Object;
       state.showLogin = false;
+    },
+    setId(state, id) {
+      state.idEvent = id;
     },
   },
   actions: {
@@ -55,7 +58,6 @@ export default new Vuex.Store({
 
         // setItem in local storage and commit the user + toggle showlogin
         if (isMatch !== undefined) {
-          console.log("isMetch inside");
           sessionStorage.setItem("meetup", JSON.stringify(isMatch));
           ctx.commit("setUser", isMatch);
           ctx.commit("toggleLoggedIn");
@@ -91,38 +93,59 @@ export default new Vuex.Store({
         console.log("ERROR IN SETREVIEW", error);
       }
     },
-    async enrollUser(ctx, idEvent) {
+    async enrollUser(ctx, event) {
       let userId = ctx.state.user.id;
 
-      let findObj = this.state.events.find(
-        (event) => (event.idEvent = idEvent)
-      );
-      console.log("findObj in ENROLLUSER", findObj);
+      let findEvent = ctx.state.events.find((e) => e.idEvent === event);
 
-      findObj.enrolled.push(userId);
+      if (!findEvent.enrolled.find((e) => e === userId)) {
+        findEvent.enrolled.push(userId);
 
-      let options = {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      };
-      try {
-        let data = await ax.put(
-          `${ctx.state.url}`,
-          {
-            events: ctx.state.events,
+        let options = {
+          headers: {
+            "Content-Type": "application/json",
           },
-          options
-        );
-        console.log("data ENROLL after fetch", data);
-      } catch (error) {
-        console.log(error);
+        };
+        try {
+          let data = await ax.put(
+            `${ctx.state.url}`,
+            {
+              events: ctx.state.events,
+            },
+            options
+          );
+          console.log("You are  ENROLLED ", data);
+        } catch (error) {
+          console.log(error);
+        }
       }
+    },
+    checkState(ctx) {
+      if (sessionStorage.getItem("meetup") !== null) {
+        ctx.commit("setUser", JSON.parse(sessionStorage.getItem("meetup")));
+      }
+    },
+    findEvent(ctx, id) {
+      ctx.commit("setId", id);
     },
   },
   getters: {
     events(state) {
       return state.events;
+    },
+    event(state) {
+      if (state.events.find) {
+        return state.events.find((event) => (event.idEvent = state.idEvent));
+      } else {
+        return;
+      }
+    },
+    enrollState(state) {
+      if (state.event.enrolled) {
+        return state.event.enrolled.find((event) => event === state.user.id);
+      } else {
+        return;
+      }
     },
   },
   modules: {},

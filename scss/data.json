@@ -13,7 +13,7 @@
         "hello"
       ],
       "enrolled": [
-        "1"
+        1
       ]
     },
     {
@@ -29,7 +29,8 @@
         "hello"
       ],
       "enrolled": [
-        "1"
+        1,
+        2
       ]
     },
     {
@@ -42,9 +43,7 @@
       "description": "",
       "image": "",
       "review": [],
-      "enrolled": [
-       "1"
-      ]
+      "enrolled": []
     },
     {
       "idEvent": 4,
@@ -56,9 +55,7 @@
       "description": "",
       "image": "",
       "review": [],
-      "enrolled": [
-       
-      ]
+      "enrolled": []
     },
     {
       "idEvent": 5,
@@ -70,9 +67,7 @@
       "description": "",
       "image": "",
       "review": [],
-      "enrolled": [
-        
-      ]
+      "enrolled": []
     },
     {
       "idEvent": 6,
@@ -85,7 +80,7 @@
       "image": "",
       "review": [],
       "enrolled": [
-        "2"
+        2
       ]
     },
     {
@@ -111,7 +106,7 @@
       "image": "",
       "review": [],
       "enrolled": [
-        "2"
+        2
       ]
     },
     {
@@ -124,9 +119,7 @@
       "description": "",
       "image": "",
       "review": [],
-      "enrolled": [
-        
-      ]
+      "enrolled": []
     }
   ]
 }

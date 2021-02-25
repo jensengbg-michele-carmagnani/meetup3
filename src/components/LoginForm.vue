@@ -28,7 +28,21 @@
       </div>
     </section>
 
-    <button v-else @click="logout" class="btn-logout">Logout</button>
+     <section v-else class="login">
+      <div class="main">
+        <p class="sign" align="center">Logout</p>
+        <form class="form1">
+          
+         
+
+          <button @click="logout" class="submit">Logout</button>
+
+          <p class="forgot" align="center"></p>
+        </form>
+      </div>
+    </section>
+  
+   
   </section>
 </template>
 
@@ -67,7 +81,7 @@ export default {
   },
   computed: {
     isLoggedIn() {
-      return this.$store.state.showLogin;
+      return this.$store.state.user.username;
     },
   },
 };

@@ -11,6 +11,7 @@ import Vuex from "vuex";
 const store = new Vuex.Store({ index });
 describe("MainPage.vue", () => {
   let localVue;
+  
   beforeEach(() => {
     localVue = createLocalVue();
   });

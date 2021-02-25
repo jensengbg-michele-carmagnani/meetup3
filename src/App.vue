@@ -1,18 +1,18 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Casa</router-link> |
-      <router-link to="/login">About</router-link>
+      <router-link to="/">Home</router-link> |
+      <router-link to="/login">Login</router-link>
     </div>
-    <router-view  />
+    <router-view />
   </div>
 </template>
 <script>
 export default {
   beforeMount() {
     this.$store.dispatch("fetchEvents");
+    this.$store.dispatch("checkState");
   },
-  
 };
 </script>
 

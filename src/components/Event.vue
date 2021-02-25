@@ -1,6 +1,6 @@
 <template>
   <section id="card" @click="goToDetails(event.idEvent)">
-    <img class="event-img" :src="event.image" alt="" />
+    <img class="img-event" :src="event.image" alt="">
     <h3 class="name">{{ event.name }}</h3>
     <h3 class="location">{{ event.location }}</h3>
     <h3 class="data">{{ event.date }}</h3>
