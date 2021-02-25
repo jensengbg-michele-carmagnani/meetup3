@@ -109,9 +109,7 @@ export default new Vuex.Store({
         try {
           let data = await ax.put(
             `${ctx.state.url}`,
-            {
-              events: ctx.state.events,
-            },
+            { events: ctx.state.events },
             options
           );
           console.log("You are  ENROLLED ", data);
@@ -129,24 +127,33 @@ export default new Vuex.Store({
       ctx.commit("setId", id);
     },
   },
+  
   getters: {
+    checkUser(state) {
+      if (state.user.name)
+        return state.user.name
+    },
     events(state) {
       return state.events;
     },
     event(state) {
       if (state.events.find) {
-        return state.events.find((event) => (event.idEvent = state.idEvent));
+       
+        return state.events.find((event) => (event.idEvent == state.idEvent));
       } else {
         return;
       }
     },
-    enrollState(state) {
-      if (state.event.enrolled) {
-        return state.event.enrolled.find((event) => event === state.user.id);
-      } else {
-        return;
-      }
-    },
+    // enrollState(state) {
+    //   if (state.events.find) {
+    //     let event = state.events.find(
+    //       (event) => (event.idEvent == state.idEvent)
+    //     );
+    //     return event.enrolled.find((e) => e == state.user.id);
+    //   } else {
+    //     return;
+    //   }
+    // },
   },
   modules: {},
 });

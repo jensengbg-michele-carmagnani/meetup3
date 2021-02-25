@@ -1,6 +1,6 @@
 <template>
   <section id="eventInfo">
-    <article class="message">
+    <article v-if="!checkUser" class="message">
       <p v-if="enrollmentState !== undefined">Enrolled</p>
       <p v-else>not enrolled</p>
     </article>
@@ -24,7 +24,7 @@
         v-model="review"
       />
     </article>
-    <article class="enrollment" v-if="!checkUser">
+    <article class="enrollment" v-if="!enrollmentState && !checkUser">
       <button class="btn-enroll" @click="enrollUser">Enroll the event</button>
     </article>
     <section class="comments-are">
@@ -50,9 +50,10 @@ export default {
   methods: {
     enrollUser() {
       let eventId = this.event.idEvent;
-
+      console.log("eventId in InfoPage", eventId);
       this.$store.dispatch("enrollUser", eventId);
     },
+
     setReview() {
       let data = {
         reviewText: this.review,
@@ -65,22 +66,28 @@ export default {
 
   computed: {
     event() {
-      let idEvent = this.$route.params.id;
-      this.$store.dispatch("findEvent", idEvent);
-      return this.$store.getters.event;
+      this.$store.dispatch("findEvent", this.$route.params.id);
 
-      // return this.$store.getters.events.find(
-      //   (event) => event.idEvent == this.$route.params.id
-      // );
+      return this.$store.getters.event;
     },
     enrollmentState() {
-      let idUser = this.$store.state.user.id;
-      return this.$store.getters.event.enrolled.find(
-        (event) => event === idUser
-      );
+      let userEnroll;
+      if (this.$store.getters.events.find) {
+        let event = this.$store.getters.events.find(
+          (e) => e.idEvent == this.$route.params.id
+        );
+
+        userEnroll = event.enrolled.find(
+          (event) => event == this.$store.state.user.id
+        );
+      }
+      return userEnroll;
+
+      // this.$store.dispatch("findEvent", this.$route.params.id);
+      // return this.$store.getters.enrollState;
     },
     checkUser() {
-      return this.$store.state.user.name;
+      return this.$store.getters.checkUser;
     },
   },
 };

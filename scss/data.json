@@ -8,7 +8,7 @@
       "starting-time": "18:30",
       "method": "onLine",
       "description": "",
-      "image": "../src/assets/Ethics.webp'",
+      "image": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80'",
       "review": [
         "hello"
       ],
@@ -24,7 +24,7 @@
       "starting-time": "20:30",
       "method": "onLine",
       "description": "",
-      "image": "",
+      "image": "https://images.unsplash.com/photo-1595988276998-2e91c940518c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80",
       "review": [
         "hello"
       ],
@@ -41,7 +41,7 @@
       "starting-time": "10:30",
       "method": "onLine",
       "description": "",
-      "image": "",
+      "image": "https://images.unsplash.com/photo-1588852065463-5de1411ea697?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
       "review": [],
       "enrolled": []
     },
@@ -53,7 +53,7 @@
       "starting-time": "11:30",
       "method": "onLine",
       "description": "",
-      "image": "",
+      "image": "https://images.unsplash.com/photo-1581094651181-35942459ef62?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80",
       "review": [],
       "enrolled": []
     },
@@ -65,7 +65,7 @@
       "starting-time": "11:30",
       "method": "onLine",
       "description": "",
-      "image": "",
+      "image": "https://images.unsplash.com/photo-1594834749740-74b3f6764be4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=937&q=80",
       "review": [],
       "enrolled": []
     },
@@ -77,7 +77,7 @@
       "starting-time": "10:30",
       "method": "onLine",
       "description": "",
-      "image": "",
+      "image": "https://images.unsplash.com/photo-1455849318743-b2233052fcff?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2250&q=80",
       "review": [],
       "enrolled": [
         2
@@ -91,7 +91,7 @@
       "starting-time": "20:30",
       "method": "onLine",
       "description": "",
-      "image": "",
+      "image": "https://images.unsplash.com/photo-1564419379075-584260fc947b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80",
       "review": [],
       "enrolled": []
     },
@@ -103,7 +103,7 @@
       "starting-time": "16:30",
       "method": "onLine",
       "description": "",
-      "image": "",
+      "image": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1331&q=80",
       "review": [],
       "enrolled": [
         2
@@ -117,7 +117,7 @@
       "starting-time": "19:30",
       "method": "onLine",
       "description": "",
-      "image": "",
+      "image": "https://images.unsplash.com/photo-1523215108660-3fdf7932d7a5?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2245&q=80",
       "review": [],
       "enrolled": []
     }
