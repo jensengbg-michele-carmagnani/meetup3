@@ -23,4 +23,4 @@ The data are stored and retrieve using Jsonbin.io as a RESTful service.
 ------------
 ### Available link 
 - **[Github meetup repo](https://trello.com/b/PupblE89/vue-shophttp:// "Meetup repository")**
-- **[Heroku cloud address](https://dashboard.heroku.com/apps/meetup-michele "Heroku cloud address")**
+- **[Heroku cloud address](https://meetup-michele.herokuapp.com/#/ "Heroku cloud address")**
