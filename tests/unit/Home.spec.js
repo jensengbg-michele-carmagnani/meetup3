@@ -31,19 +31,8 @@ describe("MainPage.vue", () => {
     });
     expect(actions.fetchEvents).toHaveBeenCalled();
   });
-  // it('should test the mutation ', () => {
-  //   let state = {
-  //      events:Array
-  //   }
-  //   let mutations = {
-      
-  //   }
-  //   const store = new Vuex.Store({ actions });
-    
-  // })
 
- 
-
+  
   it("should render Foot coponent", () => {
     const wrapper = mount(Home, {
       store,

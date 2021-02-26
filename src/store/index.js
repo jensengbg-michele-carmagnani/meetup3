@@ -28,7 +28,6 @@ export default new Vuex.Store({
     },
     logoutUser(state) {
       state.user = Object;
-      state.showLogin = false;
     },
     setId(state, id) {
       state.idEvent = id;

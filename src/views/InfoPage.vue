@@ -1,5 +1,5 @@
 <template>
-  <section id="eventInfo">
+  <section v-if="event" id="eventInfo">
     <article v-if="!checkUser" class="message">
       <p v-if="enrollmentState !== undefined">Enrolled</p>
       <p v-else>not enrolled</p>
@@ -66,8 +66,10 @@ export default {
 
   computed: {
     event() {
-      this.$store.dispatch("findEvent", this.$route.params.id);
-
+      
+      if (this.$route) {
+        this.$store.dispatch("findEvent", this.$route.params.id);
+      }
       return this.$store.getters.event;
     },
     enrollmentState() {

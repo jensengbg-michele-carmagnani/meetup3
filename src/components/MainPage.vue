@@ -2,7 +2,7 @@
   <section id="main-page">
     <h2 class="title">Eventpage</h2>
     <section class="search-section">
-      <input type="text" class="css-input" v-model="search" @input="filter" />
+      <input type="text" class="css-input" v-model="search"  />
     </section>
     <Event
       
@@ -17,9 +17,9 @@
 <script>
 import Event from "@/components/Event.vue";
 export default {
-  mounted() {
-    this.filter();
-  },
+  // mounted() {
+  //   this.filter();
+  // },
   name: "MainPage",
   data() {
     return {
@@ -33,26 +33,26 @@ export default {
 
   methods: {
    
-    filter() {
-      let events = this.getEvents;
-      if (
-        this.search === undefined ||
-        this.search === null ||
-        this.search == ""
-      ) {
-        this.filterArray = events;
-        console.log("events filter ", this.filterArray);
-      } else {
-        this.filterArray = events.filter((event) => {
-          let titleName = event.name
-            .toLowerCase()
-            .includes(this.search.toLowerCase);
-          console.log("titleName", titleName);
-          console.log();
-          return titleName;
-        });
-      }
-    },
+    // filter() {
+    //   let events = this.getEvents;
+    //   if (
+    //     this.search === undefined ||
+    //     this.search === null ||
+    //     this.search == ""
+    //   ) {
+    //     this.filterArray = events;
+    //     console.log("events filter ", this.filterArray);
+    //   } else {
+    //     this.filterArray = events.filter((event) => {
+    //       let titleName = event.name
+    //         .toLowerCase()
+    //         .includes(this.search.toLowerCase);
+    //       console.log("titleName", titleName);
+    //       console.log();
+    //       return titleName;
+    //     });
+    //   }
+    // },
   },
   computed: {
     getEvents() {

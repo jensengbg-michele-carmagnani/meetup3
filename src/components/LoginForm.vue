@@ -28,21 +28,16 @@
       </div>
     </section>
 
-     <section v-else class="login">
+    <section v-else class="login">
       <div class="main">
         <p class="sign" align="center">Logout</p>
         <form class="form1">
-          
-         
-
           <button @click="logout" class="submit">Logout</button>
 
           <p class="forgot" align="center"></p>
         </form>
       </div>
     </section>
-  
-   
   </section>
 </template>
 
@@ -55,7 +50,7 @@ export default {
         username: "",
         pass: "",
       },
-      
+
       isFailed: false,
     };
   },
@@ -81,7 +76,11 @@ export default {
   },
   computed: {
     isLoggedIn() {
-      return this.$store.state.user.username;
+      if (this.$store.state.user) {
+        return this.$store.state.user.username;
+      }else{
+        return false
+      }
     },
   },
 };
