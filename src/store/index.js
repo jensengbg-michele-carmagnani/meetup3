@@ -73,7 +73,7 @@ export default new Vuex.Store({
         (event) => event.name == data.eventName
       );
       findObj.review.push(data.reviewText);
-      console.log("findObj in setreviw", findObj);
+
       let options = {
         headers: {
           "Content-Type": "application/json",
@@ -117,6 +117,29 @@ export default new Vuex.Store({
         }
       }
     },
+    async newEvent(ctx, NewEvent) {
+      
+      let id = ctx.state.events.length + 1;
+      NewEvent.idEvent = id;
+      ctx.state.events.push(NewEvent)
+      let options = {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+
+      try {
+
+        let data = await ax.put(
+              `${ctx.state.url}`,
+              { events: ctx.state.events },
+              options
+        );
+        console.log('data NewEvent',data)
+      } catch (error) {
+        console.log(error)
+      }
+    },
     checkState(ctx) {
       if (sessionStorage.getItem("meetup") !== null) {
         ctx.commit("setUser", JSON.parse(sessionStorage.getItem("meetup")));
@@ -126,19 +149,17 @@ export default new Vuex.Store({
       ctx.commit("setId", id);
     },
   },
-  
+
   getters: {
     checkUser(state) {
-      if (state.user.name)
-        return state.user.name
+      if (state.user.name) return state.user.name;
     },
     events(state) {
       return state.events;
     },
     event(state) {
       if (state.events.find) {
-       
-        return state.events.find((event) => (event.idEvent == state.idEvent));
+        return state.events.find((event) => event.idEvent == state.idEvent);
       } else {
         return;
       }

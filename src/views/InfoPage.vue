@@ -12,9 +12,9 @@
       <p>{{ event.date }}</p>
       <p>{{ event.method }}</p>
       <p>{{ event.location }}</p>
+    <article class="description">{{ event.description }}</article>
     </article>
 
-    <article class="description">{{ event.description }}</article>
     <article v-if="!checkUser" class="review-input-area">
       <label class="add-review" for="">Add your review</label>
       <input
