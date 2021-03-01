@@ -20,7 +20,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.filter();
-    }, 1000);
+    }, 700);
     
   },
  
