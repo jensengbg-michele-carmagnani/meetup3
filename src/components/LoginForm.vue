@@ -57,9 +57,9 @@ export default {
   methods: {
     async getLogin() {
       let userLogin = { username: this.login.username, pass: this.login.pass };
-
-      await this.$store.dispatch("login", userLogin);
-      if (this.isLoggedIn) {
+    console.log('LoginInfo',userLogin )
+       await this.$store.dispatch("login", userLogin);
+       if (  this.isLoggedIn) {
         this.login.username = "";
         this.login.pass = "";
         this.$router.push("/");
