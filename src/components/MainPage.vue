@@ -18,8 +18,12 @@
 import Event from "@/components/Event.vue";
 export default {
   mounted() {
-    this.filter();
+    setTimeout(() => {
+      this.filter();
+    }, 500);
+    
   },
+ 
   name: "MainPage",
   data() {
     return {
@@ -33,6 +37,7 @@ export default {
 
   methods: {
     filter() {
+      console.log('Filter fucntion ')
       let events = this.getEvents;
       if (
         this.search === undefined ||
@@ -45,9 +50,10 @@ export default {
           let titleName = event.name
             .toLowerCase()
             .includes(this.search.toLowerCase());
-          console.log("titleName", titleName);
+          console.log("titleName", this.filterArray);
           return titleName;
         });
+     
       }
     },
   },
