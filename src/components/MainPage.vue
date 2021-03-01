@@ -10,7 +10,7 @@
       :key="index"
       :event="event"
     />
-    >
+    
   </section>
 </template>
 
@@ -20,7 +20,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.filter();
-    }, 500);
+    }, 1000);
     
   },
  
