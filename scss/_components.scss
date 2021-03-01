@@ -107,6 +107,13 @@
           margin-bottom: 27px;
           font-family: "Ubuntu", sans-serif;
       }
+      .name:focus,
+      .data:focus,
+      .time:focus,
+      .description:focus{
+        border: 2px solid rgba(0, 0, 0, 0.18) !important;
+      }
+      
       .submit{
           margin-bottom: 2rem;        
           cursor: pointer;
