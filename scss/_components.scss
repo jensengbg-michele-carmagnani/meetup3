@@ -59,12 +59,46 @@
 }
 
 #foot {
-  height: 200px;
+  height: 400px;
   width: 100%;
-  background-color: #4e5d6d;
+  background-color: #212121;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+
+  .container {
+    margin-top: 2rem;
+    border-top: 1px solid #ffffff;
+    width: 60%;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    .account,
+    .meetup,
+    .discover {
+      margin: 0 3rem;
+    }
+  }
+  .icons {
+    width: 30%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  .facebook:hover, .instagram:hover, .twitter:hover {
+    background-color: #ffffff;
+    border-radius: 1.5rem;
+    transition:  all 0.5s ease-out ;
+   
+  }
+  .registered{
+    font-weight: 800;
+    margin-top: 2rem;
+  }
 }
 #new-event {
   height: 100%;
@@ -75,11 +109,10 @@
   align-items: center;
   .main {
     background-color: #ffffff;
-      
-      
-      margin: 7em auto;
-      border-radius: 1.5em;
-      box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+
+    margin: 7em auto;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
     .form1 {
       display: flex;
       justify-content: center;
@@ -91,47 +124,46 @@
       .description {
         margin: 2rem;
         width: 76%;
-          color: rgb(38, 50, 56);
-          font-weight: 700;
-          font-size: 14px;
-          letter-spacing: 1px;
-          background: rgba(136, 126, 126, 0.04);
-          padding: 10px 20px;
-          border: none;
-          border-radius: 20px;
-          outline: none;
-          box-sizing: border-box;
-          border: 2px solid rgba(0, 0, 0, 0.02);
-          margin-bottom: 50px;
-          text-align: center;
-          margin-bottom: 27px;
-          font-family: "Ubuntu", sans-serif;
+        color: rgb(38, 50, 56);
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 1px;
+        background: rgba(136, 126, 126, 0.04);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        outline: none;
+        box-sizing: border-box;
+        border: 2px solid rgba(0, 0, 0, 0.02);
+        margin-bottom: 50px;
+        text-align: center;
+        margin-bottom: 27px;
+        font-family: "Ubuntu", sans-serif;
       }
       .name:focus,
       .data:focus,
       .time:focus,
-      .description:focus{
+      .description:focus {
         border: 2px solid rgba(0, 0, 0, 0.18) !important;
       }
-      .fail-input{
+      .fail-input {
         border: 2px solid red;
       }
 
-      
-      .submit{
-          margin-bottom: 2rem;        
-          cursor: pointer;
-          border-radius: 5em;
-          color: #fff;
-          background: linear-gradient(to right, #9c27b0, #e040fb);
-          border: 0;
-          padding-left: 40px;
-          padding-right: 40px;
-          padding-bottom: 10px;
-          padding-top: 10px;
-          font-family: "Ubuntu", sans-serif;
-          font-size: 20px;
-          box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+      .submit {
+        margin-bottom: 2rem;
+        cursor: pointer;
+        border-radius: 5em;
+        color: #fff;
+        background: linear-gradient(to right, #9c27b0, #e040fb);
+        border: 0;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 20px;
+        box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
       }
     }
   }

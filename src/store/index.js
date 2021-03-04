@@ -53,7 +53,6 @@ export default new Vuex.Store({
         );
 
         // // let isMetch = loginMebersArray.includes("michele");
-        console.log("is metch", isMatch);
 
         // setItem in local storage and commit the user + toggle showlogin
         if (isMatch !== undefined) {
@@ -118,10 +117,9 @@ export default new Vuex.Store({
       }
     },
     async newEvent(ctx, NewEvent) {
-      
       let id = ctx.state.events.length + 1;
       NewEvent.idEvent = id;
-      ctx.state.events.push(NewEvent)
+      ctx.state.events.push(NewEvent);
       let options = {
         headers: {
           "Content-Type": "application/json",
@@ -129,15 +127,14 @@ export default new Vuex.Store({
       };
 
       try {
-
         let data = await ax.put(
-              `${ctx.state.url}`,
-              { events: ctx.state.events },
-              options
+          `${ctx.state.url}`,
+          { events: ctx.state.events },
+          options
         );
-        console.log('data NewEvent',data)
+        console.log("data NewEvent", data);
       } catch (error) {
-        console.log(error)
+        console.log(error);
       }
     },
     checkState(ctx) {
