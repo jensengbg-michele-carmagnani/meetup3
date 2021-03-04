@@ -19,7 +19,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.filter();
-    }, 700);
+    }, 900);
   },
 
   name: "MainPage",
