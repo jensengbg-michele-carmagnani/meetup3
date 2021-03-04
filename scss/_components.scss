@@ -4,7 +4,7 @@
   display: grid;
   margin-bottom: 5rem;
   grid-template-columns: repeat(3, 1fr);
-  justify-self: center;
+
   grid-template-areas:
     "header header header"
     "search search search"
@@ -17,6 +17,7 @@
     color: #af42b9;
   }
   .search-section {
+    justify-self: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,6 +39,10 @@
     .css-input:focus {
       outline: none;
     }
+  }
+  .events-section {
+    grid-area: events events events;
+    justify-self: center;
   }
 
   #card {
@@ -89,13 +94,14 @@
     align-items: center;
     cursor: pointer;
   }
-  .facebook:hover, .instagram:hover, .twitter:hover {
+  .facebook:hover,
+  .instagram:hover,
+  .twitter:hover {
     background-color: #ffffff;
     border-radius: 1.5rem;
-    transition:  all 0.5s ease-out ;
-   
+    transition: all 0.5s ease-out;
   }
-  .registered{
+  .registered {
     font-weight: 800;
     margin-top: 2rem;
   }
