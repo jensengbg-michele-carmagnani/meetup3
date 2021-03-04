@@ -23,9 +23,16 @@ body {
     text-align: center;
     color: #2c3e50;
     #nav {
+      background-color: #212121;
+      height: 8%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
       a {
         font-weight: bold;
-        color: #2c3e50;
+        color: #ffffff;
+        margin: 0 0.5rem 0 0.5rem;
 
         &.router-link-exact-active {
           color: #42b983;
@@ -50,6 +57,8 @@ body {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        -webkit-box-shadow: 0px 9px 15px 2px #000000;
+        box-shadow: 0px 9px 15px 2px #000000;
         //background-color: rgb(67, 67, 98);
         h1 {
           color: rgb(183, 55, 187);
@@ -99,15 +108,13 @@ body {
         }
       }
     }
-    #add-event{
-      height:100% ;
+    #add-event {
+      height: 100%;
       width: 100%;
       background-color: #faf9f9;
-    
-
     }
     #eventInfo {
-     position: relative;
+      position: relative;
       height: 100%;
       width: 80%;
       display: flex;
@@ -117,7 +124,6 @@ body {
       border: 1px solid rgb(98, 20, 170);
       margin: auto;
       .message {
-
         position: absolute;
         top: 100px;
         left: 180px;
@@ -133,7 +139,7 @@ body {
         box-shadow: 11px 11px 11px #ccbfcc, -11px -11px 11px #fff9ff;
       }
       .card-info {
-         margin-top: 10rem;
+        margin-top: 10rem;
         border: solid 1px #d517db;
         width: 50%;
         height: 50%;
@@ -144,7 +150,7 @@ body {
       .review-input-area {
         display: flex;
         flex-direction: column;
-        .add-review{
+        .add-review {
           padding: 3rem;
           font-weight: 800;
         }
@@ -161,46 +167,46 @@ body {
           text-shadow: 0px 0px 5px rgba(66, 66, 66, 0.75);
         }
       }
-      .enrollment{
-        .btn-enroll{
-           background: #50eca0;
-            background-image: -webkit-linear-gradient(top, #50eca0, #dbec50);
-            background-image: -moz-linear-gradient(top, #50eca0, #dbec50);
-            background-image: -ms-linear-gradient(top, #50eca0, #dbec50);
-            background-image: -o-linear-gradient(top, #50eca0, #dbec50);
-            background-image: -webkit-gradient(to bottom, #50eca0, #dbec50);
-            -webkit-border-radius: 20px;
-            -moz-border-radius: 20px;
-            border-radius: 20px;
-            color: #ffffff;
-            font-family: Tahoma;
-            font-size: 21px;
-            font-weight: 100;
-            padding: 32px;
-            -webkit-box-shadow: 1px 1px 20px 0 #000000;
-            -moz-box-shadow: 1px 1px 20px 0 #000000;
-            box-shadow: 1px 1px 20px 0 #000000;
-            text-shadow: 1px 1px 20px #000000;
-            border: solid #337fed 1px;
-            text-decoration: none;
-            display: inline-block;
-            cursor: pointer;
-            text-align: center;
-            margin: 2rem;
+      .enrollment {
+        .btn-enroll {
+          background: #50eca0;
+          background-image: -webkit-linear-gradient(top, #50eca0, #dbec50);
+          background-image: -moz-linear-gradient(top, #50eca0, #dbec50);
+          background-image: -ms-linear-gradient(top, #50eca0, #dbec50);
+          background-image: -o-linear-gradient(top, #50eca0, #dbec50);
+          background-image: -webkit-gradient(to bottom, #50eca0, #dbec50);
+          -webkit-border-radius: 20px;
+          -moz-border-radius: 20px;
+          border-radius: 20px;
+          color: #ffffff;
+          font-family: Tahoma;
+          font-size: 21px;
+          font-weight: 100;
+          padding: 32px;
+          -webkit-box-shadow: 1px 1px 20px 0 #000000;
+          -moz-box-shadow: 1px 1px 20px 0 #000000;
+          box-shadow: 1px 1px 20px 0 #000000;
+          text-shadow: 1px 1px 20px #000000;
+          border: solid #337fed 1px;
+          text-decoration: none;
+          display: inline-block;
+          cursor: pointer;
+          text-align: center;
+          margin: 2rem;
         }
         .btn-enroll:hover {
-            border: solid #337fed 1px;
-            background: #1e62d0;
-            background-image: -webkit-linear-gradient(top, #1e62d0, #3d94f6);
-            background-image: -moz-linear-gradient(top, #1e62d0, #3d94f6);
-            background-image: -ms-linear-gradient(top, #1e62d0, #3d94f6);
-            background-image: -o-linear-gradient(top, #1e62d0, #3d94f6);
-            background-image: -webkit-gradient(to bottom, #1e62d0, #3d94f6);
-            -webkit-border-radius: 20px;
-            -moz-border-radius: 20px;
-            border-radius: 20px;
-            text-decoration: none;
-          }
+          border: solid #337fed 1px;
+          background: #1e62d0;
+          background-image: -webkit-linear-gradient(top, #1e62d0, #3d94f6);
+          background-image: -moz-linear-gradient(top, #1e62d0, #3d94f6);
+          background-image: -ms-linear-gradient(top, #1e62d0, #3d94f6);
+          background-image: -o-linear-gradient(top, #1e62d0, #3d94f6);
+          background-image: -webkit-gradient(to bottom, #1e62d0, #3d94f6);
+          -webkit-border-radius: 20px;
+          -moz-border-radius: 20px;
+          border-radius: 20px;
+          text-decoration: none;
+        }
       }
     }
   }
